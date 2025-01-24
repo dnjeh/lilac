@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${pretendard.variable} antialiased`}
+        className={`${pretendard.variable} antialiased break-keep selection:bg-purple-400`}
       >
         {children}
       </body>
