@@ -6,10 +6,10 @@ interface SectionInnerProps {
 const SectionInner = ({ title, context }: SectionInnerProps) => {
   return (
     <div className="flex-1">
-      <h3 className="font-semibold text-2xl lg:text-4xl mb-2">
+      <h3 className="font-semibold text-2xl lg:text-3xl mb-2">
         {title}
       </h3>
-      <p className="text-2xl font-normal lg:text-4xl">
+      <p className="text-2xl font-normal lg:text-2xl">
         {context}
       </p>
     </div>
