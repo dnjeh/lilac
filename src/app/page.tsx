@@ -6,8 +6,6 @@ import ImgLilac from "../../public/lilac.jpg";
 import ImgSolved from "../../public/solved.svg";
 import ImgSolvedDark from "../../public/solved_dark.svg";
 import Imgdnjeh from "../../public/dnjeh.png";
-import ImgSpeedat from "../../public/speedat.svg";
-import ImgSpeedatGif from "../../public/speedat_calendar.gif";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import IconLink from "./_components/IconLink";
@@ -15,6 +13,8 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { TbMail } from "react-icons/tb";
 import { PiClockCountdownBold } from "react-icons/pi";
+import { lilacList } from "./_components/data";
+import ProjectInner from "./_components/ProjectInner";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Line />
+      <Line id="project" />
       <section className="w-full">
         <h3 className="text-3xl sm:text-4xl lg:text-6xl font-bold flex w-full">
           프로젝트들
@@ -137,93 +137,17 @@ export default function Home() {
         <div className="">
           {theme === "light" ? (
             <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
-              <li>
-                <div className="flex gap-10">
-                  <div className="flex-1">
-                    <h5 className="flex text-2xl sm:text-3xl lg:text-4xl items-center font-semibold gap-3">
-                      <div>
-                        Speedat
-                        <span className="text-purple-500 dark:text-yellow-300">
-                          .
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <div>( </div>
-                        <Image
-                          src={ImgSpeedat}
-                          alt="'스피닷 로고"
-                          className="w-20"
-                        />
-                        <div> )</div>
-                      </div>
-                    </h5>
-                    <ul className="text-2xl mt-3 list-disc marker:text-purple-500 pl-6">
-                      <li>
-                        학교 비공식 커뮤니티 사이트 스피닷에서 캘린더, 급식,
-                        시간표 컴포넌트를 만들었어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        애니메이션을 위해 useRef 훅을 이용하여 캘린더의
-                        자연스러운 움직임을 구현했어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        교육청 OpenApi를 통해 급식, 시간표 정보를 next.js 내에서
-                        받아왔어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        pnpm, typescript, next.js, tailwindcss 등의 기술을
-                        사용했어요.
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="hidden md:block h-80 px-10 border-2 rounded-lg">
-                    <Image
-                      src={ImgSpeedatGif}
-                      alt="스피닷 캘린더 시연 영상"
-                      className="h-full w-full"
-                    ></Image>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="flex gap-10">
-                  <div className="flex-1">
-                    <h5 className="flex text-2xl sm:text-3xl lg:text-4xl items-center font-semibold gap-3">
-                      <div>
-                        Introduce School Club
-                        <span className="text-purple-500 dark:text-yellow-300">
-                          .
-                        </span>
-                      </div>
-                    </h5>
-                    <ul className="text-2xl mt-3 list-disc marker:text-purple-500 pl-6">
-                      <li>
-                        학교 비공식 커뮤니티 사이트 스피닷에서 캘린더, 급식,
-                        시간표 컴포넌트를 만들었어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        애니메이션을 위해 useRef 훅을 이용하여 캘린더의
-                        자연스러운 움직임을 구현했어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        교육청 OpenApi를 통해 급식, 시간표 정보를 next.js 내에서
-                        받아왔어요.
-                      </li>
-                      <li className="mt-1 lg:mt-2">
-                        pnpm, typescript, next.js, tailwindcss 등의 기술을
-                        사용했어요.
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="hidden md:block h-full">
-                    <Image
-                      src={ImgSpeedatGif}
-                      alt="스피닷 캘린더 시연 영상"
-                      className="object-contain my-auto"
-                    ></Image>
-                  </div>
-                </div>
-              </li>
+              {lilacList.map((a, ai) => (
+                <ProjectInner
+                  name={a.name}
+                  image={a.image}
+                  image_alt={a.image_alt}
+                  detail={a.detail}
+                  detail_image={a.detail_image}
+                  detail_image_alt={a.detail_image_alt}
+                  key={ai}
+                />
+              ))}
             </ul>
           ) : (
             <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
@@ -251,8 +175,8 @@ export default function Home() {
         </div>
       </section>
       <Line />
-      <span className="mb-12 text-lg text-slate-950 dark:text-slate-50 opacity-25">
-        Last update: 2025.01.26
+      <span className="mb-12 text-base text-slate-950 dark:text-slate-50 opacity-25">
+        Last update: 2025.01.27
       </span>
     </div>
   );
