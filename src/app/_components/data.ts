@@ -1,6 +1,9 @@
 import ImgSpeedat from "../../../public/speedat.svg";
 import ImgSpeedatGif from "../../../public/speedat_calendar.gif";
-import ImgISCGif from "../../../public/introduceschoolclub.gif"
+import ImgISCGif from "../../../public/isc1200.gif"
+import ImgLL from "../../../public/limitletter.png"
+import ImgLLGif from "../../../public/ll2.gif"
+import ImgBSMGif from "../../../public/bsm.gif"
 export const lilacList: ProjectType[] = [
   {
     detail: [
@@ -25,5 +28,31 @@ export const lilacList: ProjectType[] = [
     detail_image: ImgISCGif,
     detail_image_alt: "introduce school club post 시연 영상",
     name: "Introduce School Club",
+  },
+];
+export const dnjehList: ProjectType[] = [
+  {
+    detail: [
+      "편지를 암호화하고 유효기간을 설정하여 주고 받을 수 있는 프로그램이에요.",
+      "1년동안 꾸준히 쓰이며 피드백을 모아 계절마다 업데이트 되었어요.",
+      "이용자가 없어져 현재는 업데이트가 안 되고 있어요.",
+      "conio.h, io.h, errno.h, windows.h 등의 라이브러리를 사용했어요.",
+    ],
+    detail_image: ImgLLGif,
+    detail_image_alt: "LimitLetter 스크린샷",
+    name: "LimitLetter",
+    image: ImgLL,
+    image_alt: "LimitLetter 로고",
+  },
+  {
+    detail: [
+      "행운의 이름을 뽑기 위해 특별히 제작된 프로그램이에요.",
+      "부드러운 움직임을 위해 더블 버퍼링 기법을 이용했어요.",
+      "레버의 움직임과 슬롯머신의 움직임을 개별적으로 제어하기 위해 스레드를 썼어요.",
+      "conio.h, errno.h, process.h 등의 라이브러리를 사용했어요.",
+    ],
+    detail_image: ImgBSMGif,
+    detail_image_alt: "BigSlotMachine 스크린샷",
+    name: "BigSlotMachine",
   },
 ];

@@ -11,9 +11,7 @@ import { IoMdMail } from "react-icons/io";
 import IconLink from "./_components/IconLink";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { TbMail } from "react-icons/tb";
-import { PiClockCountdownBold } from "react-icons/pi";
-import { lilacList } from "./_components/data";
+import { dnjehList, lilacList } from "./_components/data";
 import ProjectInner from "./_components/ProjectInner";
 
 export default function Home() {
@@ -130,14 +128,24 @@ export default function Home() {
       </section>
       <Line id="project" />
       <section className="w-full">
-        <h3 className="text-3xl sm:text-4xl lg:text-6xl font-bold flex w-full">
-          프로젝트들
+        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold flex w-full">
+          {theme === "light" ? "웹 " : "콘솔 "} 프로젝트들
           <span className="text-purple-500 dark:text-yellow-300">.</span>
         </h3>
-        <div className="">
-          {theme === "light" ? (
-            <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
-              {lilacList.map((a, ai) => (
+        <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
+          {theme === "light"
+            ? lilacList.map((a, ai) => (
+                <ProjectInner
+                  name={a.name}
+                  image={a.image}
+                  image_alt={a.image_alt}
+                  detail={a.detail}
+                  detail_image={a.detail_image}
+                  detail_image_alt={a.detail_image_alt}
+                  key={ai}
+                />
+              ))
+            : dnjehList.map((a, ai) => (
                 <ProjectInner
                   name={a.name}
                   image={a.image}
@@ -148,31 +156,7 @@ export default function Home() {
                   key={ai}
                 />
               ))}
-            </ul>
-          ) : (
-            <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
-              <li>
-                <h5 className="flex text-2xl sm:text-3xl lg:text-4xl items-center font-semibold gap-3">
-                  <div>
-                    LimitLetter
-                    <span className="text-purple-500 dark:text-yellow-300">
-                      .
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div>( </div>
-                    <div className="relative w-full flex items-center justify-center">
-                      <TbMail className="opacity-0" />
-                      <TbMail className="absolute z-[-1]" />
-                      <PiClockCountdownBold className="absolute h-full w-3 mx z-[-1]" />
-                    </div>
-                    <div> )</div>
-                  </div>
-                </h5>
-              </li>
-            </ul>
-          )}
-        </div>
+        </ul>
       </section>
       <Line />
       <span className="mb-12 text-base text-slate-950 dark:text-slate-50 opacity-25">
