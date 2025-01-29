@@ -9,7 +9,7 @@ interface IconLink {
 const IconLink = ({icon, context, link, className}:IconLink ) => {
   return <Link
     href={link}
-    className={`flex items-center gap-4 text-xl ${className} dark:justify-end`}
+    className={`items-center gap-4 ${className} 2xl:flex hidden order-2`}
   >
     {icon}
     {context}
