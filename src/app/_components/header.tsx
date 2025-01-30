@@ -1,6 +1,6 @@
 "use client"
 import { useTheme } from "next-themes";
-import ImgLilach from "../../../public/lilac!.png";
+import ImgLilach from "../../../public/lilach.png";
 import Image from "next/image";
 
 const Header = () => {
