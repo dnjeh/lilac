@@ -15,7 +15,6 @@ export default function Home() {
   useEffect(() => {
     setMounted(true);
   }, []);
-
   if (!mounted) {
     return null;
   }
@@ -29,12 +28,12 @@ export default function Home() {
           <div className="flex flex-col gap-5 lg:gap-10 xl:w-1/2">
             <SectionInner
               context={
-                theme === "light"
+                theme !== "dark"
                   ? "아름다운 웹은 사용자가 의도한대로 움직이고, 간단하며, 결국 만족스러워 하는 웹이에요. 모든 사람들이 아름다워할 웹을 가꾸고 싶어요."
                   : "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지."
               }
               title={
-                theme === "light"
+                theme !== "dark"
                   ? "웹이 아름답기를 바라요."
                   : "아름다운 콘솔을 그려요."
               }
@@ -50,11 +49,11 @@ export default function Home() {
       <Line id="project" />
       <section className="w-full">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold flex w-full">
-          {theme === "light" ? "웹 " : "콘솔 "} 프로젝트들
+          {theme !== "dark" ? "웹 " : "콘솔 "} 프로젝트들
           <span className="text-purple-500 dark:text-yellow-300">.</span>
         </h3>
         <ul className="flex flex-col gap-6 lg:gap-12 lg:mt-8 mt-4">
-          {theme === "light"
+          {theme !== "dark"
             ? lilacList.map((a, ai) => (
                 <ProjectInner
                   name={a.name}

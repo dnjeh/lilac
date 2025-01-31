@@ -20,7 +20,7 @@ const ToggleCon = () => {
       {/*
             <div className="2xl:mt-4 w-full text-center 2xl:absolute 2xl:top-0">
               <span className="bg-purple-500 dark:bg-yellow-300 text-white dark:text-slate-700 rounded-full px-3 py-1 select-none">
-                현재는 {theme === "light" ? "라일락" : "원도"} 모드에요.
+                현재는 {theme !== "dark" ? "라일락" : "원도"} 모드에요.
               </span>
             </div>
 */}
@@ -40,7 +40,7 @@ const ToggleCon = () => {
         context="baekj0on1o28"
         icon={
           <Image
-            src={theme === "light" ? ImgSolved : ImgSolvedDark}
+            src={theme !== "dark" ? ImgSolved : ImgSolvedDark}
             alt="solved.ac 로고"
             className="w-5 h-5 select-none"
           />
@@ -56,9 +56,9 @@ const ToggleCon = () => {
           }}
         >
           <Image
-            src={theme === "light" ? ImgLilac : Imgdnjeh}
+            src={theme !== "dark" ? ImgLilac : Imgdnjeh}
             alt={
-              theme === "light"
+              theme !== "dark"
                 ? "프로필 이미지(라일락)"
                 : "프로필 이미지(원도)"
             }
