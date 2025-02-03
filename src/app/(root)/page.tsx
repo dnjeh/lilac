@@ -11,7 +11,7 @@ import Section from "../_components/section";
 export default function Home() {
   return (
     <CompoWrap>
-      <div className="mx-auto max-w-screen-xl lg:mt-24 mt-12 flex flex-col items-center lg:px-24 md:px-16 px-12 font-pretendard">
+      <div className="mx-auto max-w-screen-xl lg:mt-24 md:mt-12 mt-10 flex flex-col items-center lg:px-24 md:px-16 px-10 font-pretendard">
         <Header />
         <Section id="title">
           <SectionHeader />
