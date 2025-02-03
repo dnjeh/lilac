@@ -10,11 +10,11 @@ const Header = () => {
         <div className="self-start">
           <span>오,&nbsp;</span>
           <span className="text-purple-500 dark:text-yellow-400">
-            {theme === "light" ? "라일락" : "보름달"}
+            {theme !== "dark" ? "라일락" : "보름달"}
           </span>
         </div>
         <div className="md:block lg:opacity-100 md:opacity-0 hidden bg-gradient-to-r from-purple-500 dark:from-yellow-400 to-slate-950 dark:to-slate-50 flex-1 h-1 mx-4" />
-        {theme === "light" ? <div>花이 피는 날</div> : <div>月이 뜨는 밤</div>}
+        {theme !== "dark" ? <div>花이 피는 날</div> : <div>月이 뜨는 밤</div>}
         <div className="flex items-center">
           &nbsp;안녕
           {
