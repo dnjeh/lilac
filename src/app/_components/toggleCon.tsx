@@ -8,6 +8,7 @@ import { itemList } from "./data";
 import { throttle } from "lodash";
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const ToggleCon = () => {
   const { theme, setTheme } = useTheme();
@@ -52,8 +53,7 @@ const ToggleCon = () => {
     <div
       className={cn(
         "border-slate-950 dark:border-slate-600 border-opacity-20 border-0 rounded-full p-6 lg:p-8 md:gap-4 gap-1 grid-rows-3 grid-cols-2 grid-flow-col fixed flex items-center right-0 bottom-0 z-0",
-        !vis && "xl:border-[1px] xl:relative xl:grid xl:w-1/2 xl:p-12",
-        
+        !vis && "xl:border-[1px] xl:relative xl:grid xl:w-1/2 xl:p-12"
       )}
     >
       <div
@@ -73,7 +73,12 @@ const ToggleCon = () => {
           context={ai.context}
           link={ai.link}
           key={i}
-          className={cn(ai.className, !vis && "xl:flex", isShow && "hidden", isChange && "transition-opacity duration-500")}
+          className={cn(
+            ai.className,
+            !vis && "xl:flex",
+            isShow && "hidden",
+            isChange && "transition-opacity duration-500"
+          )}
         >
           {ai.icon}
         </IconLink>
@@ -81,34 +86,48 @@ const ToggleCon = () => {
       <div
         className={cn(
           "w-16 h-full flex items-center order-1 dark:order-3",
-          !vis && "xl:w-full xl:h-full xl:row-span-3",
+          !vis && "xl:w-full xl:h-full xl:row-span-3"
         )}
       >
         <div
-          className={cn("w-full h-full shadow-inner rounded-full cursor-pointer", vis && "h-[47.19px] overflow-hidden")}
-          onClick={isChange?()=>{}:themeChangeHandle}
+          className={cn(
+            "w-full h-full rounded-full cursor-pointer",
+            vis && "h-[47.19px] overflow-hidden"
+          )}
+          onClick={isChange ? () => {} : themeChangeHandle}
         >
-          <div className={cn("relative w-full h-full dark:shadow-yellow-300 shadow-purple-500 ",
-            isShow && "transition-all duration-500",
-            isShow && theme !== "dark" && "translate-x-[calc(100%+16px)]",
-            isShow && theme !== "light" && "-translate-x-[calc(100%+16px)]",
-          )}>
-            <Image
-              src={Imgdnjeh}
-              alt={"프로필 이미지(원도)"}
-              className={cn("z-1 absolute rounded-full opacity-0 dark:opacity-100 object-contain select-none pointer-events-none",
-                isChange && !vis && "transition-opacity duration-500",
-                !vis && "top-2",
-              )}
-            />
-            <Image
-              src={ImgLilac}
-              alt={"프로필 이미지(라일락)"}
-              className={cn("z-1 absolute dark:opacity-0 opacity-100 rounded-full object-contain  select-none pointer-events-none",
-                isChange && !vis && "transition-opacity duration-500",
-                !vis && "top-2",
-              )}
-            />
+          <div
+            className={cn(
+              "relative w-full h-full dark:shadow-yellow-300 shadow-purple-500 ",
+              isShow && "transition-all duration-500",
+              isShow && theme !== "dark" && "translate-x-[calc(100%+16px)]",
+              isShow && theme === "dark" && "-translate-x-[calc(100%+16px)]"
+            )}
+          >
+            <Link
+              href={"#"}
+              about="토글 버튼"
+              className="w-full h-full rounded-full cursor-default"
+            >
+              <Image
+                src={Imgdnjeh}
+                alt={"프로필 이미지(원도)"}
+                className={cn(
+                  "z-1 absolute rounded-full opacity-0 dark:opacity-100 object-contain select-none pointer-events-none",
+                  isChange && !vis && "transition-opacity duration-500",
+                  !vis && "top-2"
+                )}
+              />
+              <Image
+                src={ImgLilac}
+                alt={"프로필 이미지(라일락)"}
+                className={cn(
+                  "z-1 absolute dark:opacity-0 opacity-100 rounded-full object-contain  select-none pointer-events-none",
+                  isChange && !vis && "transition-opacity duration-500",
+                  !vis && "top-2"
+                )}
+              />
+            </Link>
           </div>
         </div>
       </div>
