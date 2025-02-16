@@ -101,7 +101,7 @@ const ToggleCon = () => {
               "relative w-full h-full dark:shadow-yellow-300 shadow-purple-500 ",
               isShow && "transition-all duration-500",
               isShow && theme !== "dark" && "translate-x-[calc(100%+16px)]",
-              isShow && theme !== "light" && "-translate-x-[calc(100%+16px)]"
+              isShow && theme === "dark" && "-translate-x-[calc(100%+16px)]"
             )}
           >
             <Link
