@@ -1,12 +1,13 @@
-import ImgSpeedat from "../../../public/speedat.svg";
+import ImgSpeedat from "../../../public/speedat.webp";
 import ImgSpeedatGif from "../../../public/speedat_calendar.webp";
-import ImgISCGif from "../../../public/isc1200.webp"
-import ImgLL from "../../../public/limitletter.png"
-import ImgLLGif from "../../../public/ll2.gif"
-import ImgBSMGif from "../../../public/bsm.gif"
+import ImgISCGif from "../../../public/isc1200.webp";
+import ImgLL from "../../../public/limitletter.png";
+import ImgLLGif from "../../../public/ll2.gif";
+import ImgBSMGif from "../../../public/bsm.gif";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import ImgSolved from "./imgSolved";
+import { getStreak } from "@/lib/utils";
 export const lilacProjectList: ProjectType[] = [
   {
     detail: [
@@ -62,39 +63,43 @@ export const dnjehProjectList: ProjectType[] = [
 ];
 
 export const itemList: ItemType[] = [
-        {context:"dnjeh",
-          icon:(<FaGithub width={"4rem"} height={"4rem"} />),
-        link: "https://github.com/dnjeh",
-        className:"dark:ml-6 -ml-2",
-        }, 
-      {
-        context:"ehdnj.001@gmail.com",
-        icon:(<IoMdMail width={"4rem"} height={"4rem"} />),
-        link:"mailto:ehdnj.001@gmail.com",
-        className:"dark:ml-0 ml-4",
-      },
-      {
-        context:"baekj0on1o28",
-        icon:(<ImgSolved/>),
-        link:"https://solved.ac/baekj0on1o28",
-        className:"dark:ml-6 -ml-2",
-      }
-]
+  {
+    context: "dnjeh",
+    icon: <FaGithub width={"4rem"} height={"4rem"} />,
+    link: "https://github.com/dnjeh",
+    className: "dark:ml-6 -ml-2",
+  },
+  {
+    context: "ehdnj.001@gmail.com",
+    icon: <IoMdMail width={"4rem"} height={"4rem"} />,
+    link: "mailto:ehdnj.001@gmail.com",
+    className: "dark:ml-0 ml-4",
+  },
+  {
+    context: "baekj0on1o28",
+    icon: <ImgSolved />,
+    link: "https://solved.ac/baekj0on1o28",
+    className: "dark:ml-6 -ml-2",
+  },
+];
+const streak = getStreak();
 const commonTitle: TitleType = {
-  context: "2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 1년에 364일, 오늘도 배움을 향해 나아가고 있어요.",
-  title: "끝없는 배움을 추구해요."
-}
+  context: `2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 오늘로 ${streak}일째, 매일매일 배움을 향해 나아가고 있어요.`,
+  title: "끝없는 배움을 추구해요.",
+};
 export const dnjehTitleList: TitleType[] = [
   {
-    context: "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지.",
-    title: "아름다운 콘솔을 그려요."
+    context:
+      "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지.",
+    title: "아름다운 콘솔을 그려요.",
   },
-  commonTitle
-]
+  commonTitle,
+];
 export const lilacTitleList: TitleType[] = [
   {
-    context: "아름다운 웹은 사용자가 의도한대로 움직이고, 간단하며, 결국 만족스러워 하는 웹이에요. 모든 사람들이 아름다워할 웹을 가꾸고 싶어요.",
-    title: "웹이 아름답기를 바라요."
+    context:
+      "아름다운 웹은 사용자가 의도한대로 움직이고, 간단하며, 결국 만족스러워 하는 웹이에요. 모든 사람들이 아름다워할 웹을 가꾸고 싶어요.",
+    title: "웹이 아름답기를 바라요.",
   },
-  commonTitle
-]
+  commonTitle,
+];
