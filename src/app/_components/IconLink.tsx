@@ -8,6 +8,7 @@ interface IconLink {
 const IconLink = ({context, link, className, children}:IconLink ) => {
   return <Link
     href={link}
+    target="_blank"
     className={`items-center gap-4 ${className} hidden order-2`}
   >
     {children}

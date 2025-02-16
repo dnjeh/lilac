@@ -1,6 +1,6 @@
 const SectionHeader = () => {
     return (
-  <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold flex lg:flex-row flex-col w-full lg:items-center items-end">
+  <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold flex lg:flex-row flex-col w-full lg:items-center items-end">
     <div className="self-start">
       <span>환영해요,&nbsp;</span>
     </div>
