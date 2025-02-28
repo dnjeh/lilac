@@ -36,14 +36,17 @@ const ToggleCon = () => {
     const { scrollY, innerHeight, innerWidth } = window;
     isVis(scrollY > (innerHeight / 6) * 5 || innerWidth < 1280);
   });
+  const setSet = () => {
+    setIsShow(false);
+    setTheme(theme !== "dark" ? "dark" : "light");
+  };
   const themeChangeHandle = () => {
-    setIsShow(true);
     setIsChange(true);
     setTimeout(() => {
-      setTheme(theme !== "dark" ? "dark" : "light");
-    }, 500);
+      setIsShow(true);
+    }, 1);
     setTimeout(() => {
-      setIsShow(false);
+      setSet();
     }, 500);
     setTimeout(() => {
       setIsChange(false);
@@ -58,9 +61,10 @@ const ToggleCon = () => {
     >
       <div
         className={cn(
-          "w-dvw h-dvh opacity-0 -z-[9999] fixed top-0 right-0 bg-[#f9f9f9] dark:bg-[#0a0a0a]",
-          isChange && "transition-opacity duration-500 ",
-          isShow && "opacity-100 dark:bg-[#f9f9f9] bg-[#0a0a0a]"
+          "w-dvw h-dvh fixed top-0 right-0",
+          theme !== "dark" && isShow || theme === "dark" && !isShow ? "bg-[#171717]" : "bg-[#f9f9f9]",
+          isChange ? "block opacity-0 transition-opacity duration-500 " : "hidden",
+          isShow ? "opacity-100" : "opacity-0"
         )}
       />
       <div className={cn("w-full text-center", !vis && "absolute top-0 mt-4")}>
@@ -100,8 +104,8 @@ const ToggleCon = () => {
             className={cn(
               "relative w-full h-full dark:shadow-yellow-300 shadow-purple-500 ",
               isShow && "transition-all duration-500",
-              isShow && theme !== "dark" && "translate-x-[calc(100%+16px)]",
-              isShow && theme === "dark" && "-translate-x-[calc(100%+16px)]"
+              !vis && isShow && theme !== "dark" && "translate-x-[calc(100%+16px)]",
+              !vis && isShow && theme === "dark" && "-translate-x-[calc(100%+16px)]"
             )}
           >
             <Link
@@ -113,18 +117,22 @@ const ToggleCon = () => {
                 src={Imgdnjeh}
                 alt={"프로필 이미지(원도)"}
                 className={cn(
-                  "z-1 absolute rounded-full opacity-0 dark:opacity-100 object-contain select-none pointer-events-none",
+                  "absolute rounded-full opacity-100 object-contain select-none pointer-events-none",
                   isChange && !vis && "transition-opacity duration-500",
-                  !vis && "top-2"
+                  theme !== "dark" && "opacity-0",
+                  !vis && "top-2",
+                  vis && "-z-10"
                 )}
               />
               <Image
                 src={ImgLilac}
                 alt={"프로필 이미지(라일락)"}
                 className={cn(
-                  "z-1 absolute dark:opacity-0 opacity-100 rounded-full object-contain  select-none pointer-events-none",
+                  "absolute rounded-full object-contain opacity-0 select-none pointer-events-none",
                   isChange && !vis && "transition-opacity duration-500",
-                  !vis && "top-2"
+                  theme !== "dark" && "opacity-100",
+                  !vis && "top-2",
+                  vis && "-z-10"
                 )}
               />
             </Link>
