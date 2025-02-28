@@ -69,7 +69,7 @@ const ToggleCon = () => {
       />
       <div className={cn("w-full text-center", !vis && "absolute top-0 mt-4")}>
         <span className="bg-purple-500 dark:bg-yellow-300 text-white dark:text-slate-700 rounded-full px-3 py-1 select-none text-sm lg:text-base">
-          현재는 {theme !== "dark" ? "라일락" : "원도"} 모드에요.
+          현재는 {theme !== "dark" ? "라이트" : "다크"} 모드에요.
         </span>
       </div>
       {itemList.map((ai, i) => (

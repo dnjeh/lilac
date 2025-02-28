@@ -6,7 +6,7 @@ import Image from "next/image";
 const Header = () => {
   const { theme } = useTheme();
   return (
-    <h2 className="text-3xl sm:text-4xl lg:h-12 lg:text-5xl font-semibold flex lg:flex-row flex-col w-full lg:items-center items-end">
+    <h2 className="text-2xl sm:text-3xl lg:h-10 lg:text-4xl font-semibold flex lg:flex-row flex-col w-full lg:items-center items-end">
       <div className="self-start">
         <span>오,&nbsp;</span>
         <span className="text-purple-500 dark:text-yellow-400">
@@ -21,7 +21,7 @@ const Header = () => {
           <Image
             src={ImgLilach}
             alt="느낌표"
-            className="h-8 w-6 sm:h-9 sm:w-6 lg:h-16 object-cover lg:w-12"
+            className="h-8 w-8 sm:h-9 sm:w-9 lg:h-10 objecqt-cover lg:w-10 sm:-mx-1"
           />
         ) : (
           "!"

@@ -84,7 +84,7 @@ export const itemList: ItemType[] = [
 ];
 const streak = getStreak();
 const commonTitle: TitleType = {
-  context: `2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 오늘로 ${streak}일째, 매일매일 배움을 향해 나아가고 있어요.`,
+  context: `2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 오늘로 ${streak}일째, 매일매일 배움을 향해 문제를 풀며 나아가고 있어요.`,
   title: "끝없는 배움을 추구해요.",
 };
 export const dnjehTitleList: TitleType[] = [
