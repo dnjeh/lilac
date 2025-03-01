@@ -61,7 +61,7 @@ const ToggleCon = () => {
     >
       <div
         className={cn(
-          "w-dvw h-dvh fixed top-0 right-0",
+          "w-dvw h-dvh fixed top-0 right-0 -z-[9999]",
           theme !== "dark" && isShow || theme === "dark" && !isShow ? "bg-[#171717]" : "bg-[#f9f9f9]",
           isChange ? "block opacity-0 transition-opacity duration-500 " : "hidden",
           isShow ? "opacity-100" : "opacity-0"
@@ -96,7 +96,8 @@ const ToggleCon = () => {
         <div
           className={cn(
             "w-full h-full rounded-full cursor-pointer",
-            vis && "h-[47.19px] overflow-hidden"
+            vis && "h-[47.19px] overflow-hidden",
+            isChange && "cursor-default"
           )}
           onClick={isChange ? () => {} : themeChangeHandle}
         >

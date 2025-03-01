@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 const SectionHeader = () => {
   const {theme} = useTheme();
   return (
-  <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold flex lg:flex-row flex-col w-full lg:items-center items-end">
+  <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold flex sm:flex-row flex-col w-full sm:items-center items-end">
     <div className="self-start">
       <span>환영해요,&nbsp;</span>
     </div>

@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
       <Line />
-      <span className="mb-12 text-base text-slate-950 dark:text-slate-50 opacity-25">
-        Last update: 2025.02.03
+      <span className="mb-12 text-base text-stone-300 dark:text-zinc-800">
+        Last update: 2025.03.01
       </span>
     </>
   );
