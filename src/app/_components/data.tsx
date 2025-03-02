@@ -1,4 +1,11 @@
 import ImgSpeedat from "../../../public/speedat.webp";
+import ImgIsc  from "../../../public/iscfinal.webp";
+import ImgRC  from "../../../public/rgbcube.webp";
+import ImgLLwebp  from "../../../public/ll.webp";
+import ImgLLdark  from "../../../public/lldark.webp";
+import ImgRCdark  from "../../../public/rgbcubedark.webp";
+import ImgBSM  from "../../../public/bsm.webp";
+import ImgBSMdark  from "../../../public/bsmdark.webp";
 import ImgSpeedatGif from "../../../public/speedat_calendar.webp";
 import ImgISCGif from "../../../public/isc1200.webp";
 import ImgLL from "../../../public/limitletter.png";
@@ -110,25 +117,28 @@ export const lilacProjectBanner: ProjectNewBannerType[] = [
     project_type: "web"
   },
   {
-    image: ImgSpeedat,
+    image: ImgIsc,
     project_type: "web"
   },
   
 ]
 export const dnjehProjectBanner: ProjectNewBannerType[] = [
   {
-    image: ImgSpeedat,
+    image: ImgLLwebp,
+    dark_image: ImgLLdark,
     project_type: "con"
   },
   {
-    image: ImgSpeedat,
+    image: ImgBSM,
+    dark_image: ImgBSMdark,
     project_type: "con"
   },
   
 ]
 export const ehdnjProjectBanner: ProjectNewBannerType[] = [
   {
-    image: ImgSpeedat,
+    image: ImgRC,
+    dark_image: ImgRCdark,
     project_type: "etc"
   },
 ]

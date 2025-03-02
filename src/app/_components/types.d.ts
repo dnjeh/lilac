@@ -11,6 +11,7 @@ type ProjectStringType = "web" | "con" | "etc";
 
 type ProjectNewBannerType = {
   image: StaticImageData;
+  dark_image?: StaticImageData;
   project_type: ProjectStringType;
 }
 
