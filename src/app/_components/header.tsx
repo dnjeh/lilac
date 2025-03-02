@@ -2,10 +2,12 @@
 import { useTheme } from "next-themes";
 import ImgLilach from "../../../public/lilach.png";
 import Image from "next/image";
+import Line from "./line";
 
 const Header = () => {
   const { theme } = useTheme();
   return (
+    <>
     <h2 className="text-2xl sm:text-3xl lg:h-10 lg:text-4xl font-semibold flex xs:flex-row flex-col w-full xs:items-center items-end">
       <div className="self-start">
         <span>오,&nbsp;</span>
@@ -28,6 +30,8 @@ const Header = () => {
         )}
       </div>
     </h2>
+    <Line id={"header"} />
+    </>
   );
 };
 

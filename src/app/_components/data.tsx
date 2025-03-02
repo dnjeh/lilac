@@ -91,7 +91,7 @@ export const dnjehTitleList: TitleType[] = [
   {
     context:
       "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지.",
-    title: "아름다운 콘솔을 그려요.",
+    title: "미려한 콘솔을 그려요.",
   },
   commonTitle,
 ];

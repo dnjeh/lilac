@@ -9,6 +9,7 @@ import Footer from "../_components/footer";
 import Section from "../_components/section";
 import ProjectNewWrap from "../_components/projectNewWrap";
 import CompoInner from "../_components/compoInner";
+import HiddenWrap from "../_components/hiddenWrap";
 
 export default function Home() {
   return (
@@ -23,12 +24,14 @@ export default function Home() {
               <ToggleCon />
             </div>
           </Section>
-          <Section id="project">
-            <ProjectHeader />
-            {/*<ProjectWrap />*/}
-            <ProjectNewWrap />
-          </Section>
-          <Footer />
+          <HiddenWrap>
+            <Section id="project">
+              <ProjectHeader />
+              {/*<ProjectWrap />*/}
+              <ProjectNewWrap />
+            </Section>
+            <Footer />
+          </HiddenWrap>
         </div>
       </CompoInner>
     </CompoWrap>
