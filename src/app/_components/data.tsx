@@ -1,4 +1,11 @@
 import ImgSpeedat from "../../../public/speedat.webp";
+import ImgIsc  from "../../../public/iscfinal.webp";
+import ImgRC  from "../../../public/rgbcube.webp";
+import ImgLLwebp  from "../../../public/ll.webp";
+import ImgLLdark  from "../../../public/lldark.webp";
+import ImgRCdark  from "../../../public/rgbcubedark.webp";
+import ImgBSM  from "../../../public/bsm.webp";
+import ImgBSMdark  from "../../../public/bsmdark.webp";
 import ImgSpeedatGif from "../../../public/speedat_calendar.webp";
 import ImgISCGif from "../../../public/isc1200.webp";
 import ImgLL from "../../../public/limitletter.png";
@@ -91,7 +98,7 @@ export const dnjehTitleList: TitleType[] = [
   {
     context:
       "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지.",
-    title: "아름다운 콘솔을 그려요.",
+    title: "미려한 콘솔을 그려요.",
   },
   commonTitle,
 ];
@@ -103,3 +110,35 @@ export const lilacTitleList: TitleType[] = [
   },
   commonTitle,
 ];
+
+export const lilacProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgSpeedat,
+    project_type: "web"
+  },
+  {
+    image: ImgIsc,
+    project_type: "web"
+  },
+  
+]
+export const dnjehProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgLLwebp,
+    dark_image: ImgLLdark,
+    project_type: "con"
+  },
+  {
+    image: ImgBSM,
+    dark_image: ImgBSMdark,
+    project_type: "con"
+  },
+  
+]
+export const ehdnjProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgRC,
+    dark_image: ImgRCdark,
+    project_type: "etc"
+  },
+]

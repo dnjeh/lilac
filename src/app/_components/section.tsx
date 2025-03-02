@@ -9,8 +9,8 @@ const Section = ({
 }) => {
   return (
     <>
-      <Line id={id} />
       <section className="w-full">{children}</section>
+      <Line id={id} />
     </>
   );
 };
