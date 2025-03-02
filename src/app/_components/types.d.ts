@@ -7,6 +7,13 @@ type ProjectType = {
   detail_image_alt: string;
 }
 
+type ProjectStringType = "web" | "con" | "etc";
+
+type ProjectNewBannerType = {
+  image: StaticImageData;
+  project_type: ProjectStringType;
+}
+
 type ItemType = {
   context: string;
   icon: React.ReactNode;

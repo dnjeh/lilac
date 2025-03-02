@@ -103,3 +103,32 @@ export const lilacTitleList: TitleType[] = [
   },
   commonTitle,
 ];
+
+export const lilacProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgSpeedat,
+    project_type: "web"
+  },
+  {
+    image: ImgSpeedat,
+    project_type: "web"
+  },
+  
+]
+export const dnjehProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgSpeedat,
+    project_type: "con"
+  },
+  {
+    image: ImgSpeedat,
+    project_type: "con"
+  },
+  
+]
+export const ehdnjProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgSpeedat,
+    project_type: "etc"
+  },
+]
