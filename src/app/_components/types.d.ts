@@ -9,6 +9,17 @@ type ProjectType = {
   key2: number;
 }
 
+type ActivityType = {
+  name: string;
+  timestemp_start: string;
+  timestemp_end: string;
+  detail: string[];
+  detail_image: StaticImageData;
+  detail_image_alt: string;
+  key2: number;
+  host: string
+}
+
 type ProjectStringType = "web" | "con" | "etc";
 
 type ProjectNewBannerType = {
@@ -28,4 +39,5 @@ type ItemType = {
 type TitleType = {
   context: string;
   title: string;
+  src: string;
 }
