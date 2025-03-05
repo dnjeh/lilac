@@ -66,7 +66,7 @@ const CompoInner = ({ children }: { children: React.ReactNode }) => {
       {children}
       <div
         className={cn(
-          "fixed bottom-0 right-0 p-6 lg:p-8 md:gap-4 gap-1 flex items-center font-pretendard transition-opacity duration-300 opacity-0",
+          "fixed bottom-0 right-0 p-6 lg:p-8 md:gap-4 gap-1 flex items-center font-pretendard transition-opacity duration-300 opacity-0 z-10",
           vis && "opacity-100"
         )}
       >

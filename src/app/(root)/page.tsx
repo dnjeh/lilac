@@ -2,14 +2,12 @@ import Header from "../_components/header";
 import SectionHeader from "../_components/sectionHeader";
 import ToggleCon from "../_components/toggleCon";
 import SectionWrap from "../_components/sectionWrap";
-//import ProjectWrap from "../_components/projectWrap";
-import ProjectHeader from "../_components/projectHeader";
 import CompoWrap from "../_components/compoWrap";
 import Footer from "../_components/footer";
 import Section from "../_components/section";
-import ProjectNewWrap from "../_components/projectNewWrap";
 import CompoInner from "../_components/compoInner";
 import HiddenWrap from "../_components/hiddenWrap";
+import ProjectRealWrap from "../_components/projectRealWrap";
 
 export default function Home() {
   return (
@@ -25,11 +23,7 @@ export default function Home() {
             </div>
           </Section>
           <HiddenWrap>
-            <Section id="project">
-              <ProjectHeader />
-              {/*<ProjectWrap />*/}
-              <ProjectNewWrap />
-            </Section>
+            <ProjectRealWrap />
             <Footer />
           </HiddenWrap>
         </div>

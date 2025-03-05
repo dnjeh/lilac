@@ -1,6 +1,7 @@
 type ProjectType = {
   name: string;
   image?: StaticImageData;
+  dark_image?: StaticImageData;
   image_alt?: string;
   detail: string[];
   detail_image: StaticImageData;
