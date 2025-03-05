@@ -8,6 +8,7 @@ import Section from "../_components/section";
 import CompoInner from "../_components/compoInner";
 import HiddenWrap from "../_components/hiddenWrap";
 import ProjectRealWrap from "../_components/projectRealWrap";
+import ActivityWrap from "../_components/activityWrap";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           </Section>
           <HiddenWrap>
             <ProjectRealWrap />
+            <ActivityWrap />
             <Footer />
           </HiddenWrap>
         </div>
