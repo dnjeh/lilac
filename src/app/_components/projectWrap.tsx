@@ -17,6 +17,7 @@ const ProjectWrap = () => {
             detail_image={a.detail_image}
             detail_image_alt={a.detail_image_alt}
             key={ai}
+            key2={a.key2}
           />
         );
       })}

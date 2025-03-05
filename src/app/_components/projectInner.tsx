@@ -8,9 +8,10 @@ const ProjectInner = ({
   image,
   image_alt,
   name,
+  key2,
 }: ProjectType) => {
   return (
-    <li>
+    <li id={"prj"+key2}>
       <div className="flex gap-10">
         <div className="flex-1">
           <h5 className="flex text-2xl sm:text-3xl lg:text-4xl items-center font-semibold gap-3">

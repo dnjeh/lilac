@@ -6,6 +6,7 @@ type ProjectType = {
   detail: string[];
   detail_image: StaticImageData;
   detail_image_alt: string;
+  key2: number;
 }
 
 type ProjectStringType = "web" | "con" | "etc";
@@ -14,6 +15,7 @@ type ProjectNewBannerType = {
   image: StaticImageData;
   dark_image?: StaticImageData;
   project_type: ProjectStringType;
+  key2: number;
 }
 
 type ItemType = {

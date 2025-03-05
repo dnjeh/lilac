@@ -30,6 +30,7 @@ export const ehdnjProjectList: ProjectType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     image_alt: "RGB LED cube 로고",
+    key2: 5,
   },
 ]
 export const lilacProjectList: ProjectType[] = [
@@ -45,6 +46,7 @@ export const lilacProjectList: ProjectType[] = [
     name: "Speedat",
     image: ImgSpeedat,
     image_alt: "스피닷 로고",
+    key2: 1,
   },
   {
     detail: [
@@ -57,7 +59,8 @@ export const lilacProjectList: ProjectType[] = [
     detail_image_alt: "introduce school club post 시연 영상",
     name: "Introduce School Club",
     image: ImgIsc,
-    image_alt: "Introduce School Club 로고"
+    image_alt: "Introduce School Club 로고",
+    key2: 2,
   },
   ...ehdnjProjectList
 ];
@@ -75,6 +78,7 @@ export const dnjehProjectList: ProjectType[] = [
     name: "LimitLetter",
     image: ImgLLdark,
     image_alt: "LimitLetter 로고",
+    key2: 3,
   },
   {
     detail: [
@@ -87,7 +91,8 @@ export const dnjehProjectList: ProjectType[] = [
     detail_image_alt: "BigSlotMachine 스크린샷",
     name: "BigSlotMachine",
     image: ImgBSMdark,
-    image_alt: "BigSlotMachine 로고"
+    image_alt: "BigSlotMachine 로고",
+    key2: 4,
   },
   ...ehdnjProjectList
 ];
@@ -137,11 +142,13 @@ export const lilacTitleList: TitleType[] = [
 export const lilacProjectBanner: ProjectNewBannerType[] = [
   {
     image: ImgSpeedat,
-    project_type: "web"
+    project_type: "web",
+    key2: 1,
   },
   {
     image: ImgIsc,
-    project_type: "web"
+    project_type: "web",
+    key2: 2,
   },
   
 ]
@@ -149,12 +156,14 @@ export const dnjehProjectBanner: ProjectNewBannerType[] = [
   {
     image: ImgLLwebp,
     dark_image: ImgLLdark,
-    project_type: "con"
+    project_type: "con",
+    key2: 3,
   },
   {
     image: ImgBSM,
     dark_image: ImgBSMdark,
-    project_type: "con"
+    project_type: "con",
+    key2: 4,
   },
   
 ]
@@ -162,6 +171,7 @@ export const ehdnjProjectBanner: ProjectNewBannerType[] = [
   {
     image: ImgRC,
     dark_image: ImgRCdark,
-    project_type: "etc"
+    project_type: "etc",
+    key2: 5,
   },
 ]
