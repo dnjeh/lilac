@@ -1,13 +1,5 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-interface ProjectInnerProps {
-  name: string;
-  image?: StaticImageData;
-  image_alt?: string;
-  detail: string[];
-  detail_image: StaticImageData;
-  detail_image_alt: string;
-}
 
 const ProjectInner = ({
   detail,
@@ -16,7 +8,7 @@ const ProjectInner = ({
   image,
   image_alt,
   name,
-}: ProjectInnerProps) => {
+}: ProjectType) => {
   return (
     <li>
       <div className="flex gap-10">

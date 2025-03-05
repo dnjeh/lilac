@@ -1,6 +1,7 @@
 import ImgSpeedat from "../../../public/speedat.webp";
 import ImgIsc  from "../../../public/iscfinal.webp";
 import ImgRC  from "../../../public/rgbcube.webp";
+import ImgRCwebp  from "../../../public/rgbcubeg.webp";
 import ImgLLwebp  from "../../../public/ll.webp";
 import ImgLLdark  from "../../../public/lldark.webp";
 import ImgRCdark  from "../../../public/rgbcubedark.webp";
@@ -8,13 +9,29 @@ import ImgBSM  from "../../../public/bsm.webp";
 import ImgBSMdark  from "../../../public/bsmdark.webp";
 import ImgSpeedatGif from "../../../public/speedat_calendar.webp";
 import ImgISCGif from "../../../public/isc1200.webp";
-import ImgLL from "../../../public/limitletter.png";
 import ImgLLGif from "../../../public/ll2.gif";
 import ImgBSMGif from "../../../public/bsm.gif";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import ImgSolved from "./imgSolved";
 import { getStreak } from "@/lib/utils";
+
+export const ehdnjProjectList: ProjectType[] = [
+  {
+    detail: [
+      "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩을 맡았어요.",
+      "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 은상을 수상하였어요.",
+      "SPI, Bluetooth 같은 통신 기법부터 numpy, matplotlib, tkinter 등의 라이브러리, 패턴 구현을 위한 알고리즘까지 다양한 기술이 들어갔어요.",
+      "C++, Java, Python 등의 언어가 사용되었어요.",
+    ],
+    detail_image: ImgRCwebp,
+    detail_image_alt: "RGB LED cube 스크린샷",
+    name: "RGB LED cube",
+    image: ImgRC,
+    dark_image: ImgRCdark,
+    image_alt: "RGB LED cube 로고",
+  },
+]
 export const lilacProjectList: ProjectType[] = [
   {
     detail: [
@@ -39,7 +56,10 @@ export const lilacProjectList: ProjectType[] = [
     detail_image: ImgISCGif,
     detail_image_alt: "introduce school club post 시연 영상",
     name: "Introduce School Club",
+    image: ImgIsc,
+    image_alt: "Introduce School Club 로고"
   },
+  ...ehdnjProjectList
 ];
 export const dnjehProjectList: ProjectType[] = [
   {
@@ -53,7 +73,7 @@ export const dnjehProjectList: ProjectType[] = [
     detail_image: ImgLLGif,
     detail_image_alt: "LimitLetter 스크린샷",
     name: "LimitLetter",
-    image: ImgLL,
+    image: ImgLLdark,
     image_alt: "LimitLetter 로고",
   },
   {
@@ -66,7 +86,10 @@ export const dnjehProjectList: ProjectType[] = [
     detail_image: ImgBSMGif,
     detail_image_alt: "BigSlotMachine 스크린샷",
     name: "BigSlotMachine",
+    image: ImgBSMdark,
+    image_alt: "BigSlotMachine 로고"
   },
+  ...ehdnjProjectList
 ];
 
 export const itemList: ItemType[] = [
