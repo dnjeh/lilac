@@ -9,7 +9,7 @@ const SectionWrap = () => {
     <div className="flex flex-col gap-5 lg:gap-10 xl:w-1/2 ">
       {
         (theme !== "dark" ? lilacTitleList : dnjehTitleList ).map((ai, i)=>(
-          <SectionInner context={ai.context} title={ai.title} key={i}/>
+          <SectionInner src={ai.src} context={ai.context} title={ai.title} key={i}/>
         ))
       }
     </div>
