@@ -1,13 +1,38 @@
 import ImgSpeedat from "../../../public/speedat.webp";
+import ImgIsc  from "../../../public/iscfinal.webp";
+import ImgRC  from "../../../public/rgbcube.webp";
+import ImgRCwebp  from "../../../public/rgbcubeg.webp";
+import ImgLLwebp  from "../../../public/ll.webp";
+import ImgLLdark  from "../../../public/lldark.webp";
+import ImgRCdark  from "../../../public/rgbcubedark.webp";
+import ImgBSM  from "../../../public/bsm.webp";
+import ImgBSMdark  from "../../../public/bsmdark.webp";
 import ImgSpeedatGif from "../../../public/speedat_calendar.webp";
 import ImgISCGif from "../../../public/isc1200.webp";
-import ImgLL from "../../../public/limitletter.png";
 import ImgLLGif from "../../../public/ll2.gif";
 import ImgBSMGif from "../../../public/bsm.gif";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import ImgSolved from "./imgSolved";
 import { getStreak } from "@/lib/utils";
+
+export const ehdnjProjectList: ProjectType[] = [
+  {
+    detail: [
+      "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩을 맡았어요.",
+      "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 은상을 수상하였어요.",
+      "SPI, Bluetooth 같은 통신 기법부터 numpy, matplotlib, tkinter 등의 라이브러리, 패턴 구현을 위한 알고리즘까지 다양한 기술이 들어갔어요.",
+      "C++, Java, Python 등의 언어가 사용되었어요.",
+    ],
+    detail_image: ImgRCwebp,
+    detail_image_alt: "RGB LED cube 스크린샷",
+    name: "RGB LED cube",
+    image: ImgRC,
+    dark_image: ImgRCdark,
+    image_alt: "RGB LED cube 로고",
+    key2: 5,
+  },
+]
 export const lilacProjectList: ProjectType[] = [
   {
     detail: [
@@ -21,6 +46,7 @@ export const lilacProjectList: ProjectType[] = [
     name: "Speedat",
     image: ImgSpeedat,
     image_alt: "스피닷 로고",
+    key2: 1,
   },
   {
     detail: [
@@ -32,7 +58,11 @@ export const lilacProjectList: ProjectType[] = [
     detail_image: ImgISCGif,
     detail_image_alt: "introduce school club post 시연 영상",
     name: "Introduce School Club",
+    image: ImgIsc,
+    image_alt: "Introduce School Club 로고",
+    key2: 2,
   },
+  ...ehdnjProjectList
 ];
 export const dnjehProjectList: ProjectType[] = [
   {
@@ -46,8 +76,9 @@ export const dnjehProjectList: ProjectType[] = [
     detail_image: ImgLLGif,
     detail_image_alt: "LimitLetter 스크린샷",
     name: "LimitLetter",
-    image: ImgLL,
+    image: ImgLLdark,
     image_alt: "LimitLetter 로고",
+    key2: 3,
   },
   {
     detail: [
@@ -59,7 +90,11 @@ export const dnjehProjectList: ProjectType[] = [
     detail_image: ImgBSMGif,
     detail_image_alt: "BigSlotMachine 스크린샷",
     name: "BigSlotMachine",
+    image: ImgBSMdark,
+    image_alt: "BigSlotMachine 로고",
+    key2: 4,
   },
+  ...ehdnjProjectList
 ];
 
 export const itemList: ItemType[] = [
@@ -84,14 +119,14 @@ export const itemList: ItemType[] = [
 ];
 const streak = getStreak();
 const commonTitle: TitleType = {
-  context: `2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 오늘로 ${streak}일째, 매일매일 배움을 향해 나아가고 있어요.`,
+  context: `2022년 여름, 프로그래밍에 불붙은 열정은 아직 식지 않았어요. 오늘로 ${streak}일째, 매일매일 배움을 향해 문제를 풀며 나아가고 있어요.`,
   title: "끝없는 배움을 추구해요.",
 };
 export const dnjehTitleList: TitleType[] = [
   {
     context:
       "이제는 잘 익숙치 않은 콘솔 응용프로그램을 제작해요. 간단한 생일 축하 프로그램부터, 안전한 편지를 보내는 프로그램까지.",
-    title: "아름다운 콘솔을 그려요.",
+    title: "미려한 콘솔을 그려요.",
   },
   commonTitle,
 ];
@@ -103,3 +138,40 @@ export const lilacTitleList: TitleType[] = [
   },
   commonTitle,
 ];
+
+export const lilacProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgSpeedat,
+    project_type: "web",
+    key2: 1,
+  },
+  {
+    image: ImgIsc,
+    project_type: "web",
+    key2: 2,
+  },
+  
+]
+export const dnjehProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgLLwebp,
+    dark_image: ImgLLdark,
+    project_type: "con",
+    key2: 3,
+  },
+  {
+    image: ImgBSM,
+    dark_image: ImgBSMdark,
+    project_type: "con",
+    key2: 4,
+  },
+  
+]
+export const ehdnjProjectBanner: ProjectNewBannerType[] = [
+  {
+    image: ImgRC,
+    dark_image: ImgRCdark,
+    project_type: "etc",
+    key2: 5,
+  },
+]
