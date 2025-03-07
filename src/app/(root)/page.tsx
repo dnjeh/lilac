@@ -9,6 +9,7 @@ import CompoInner from "../_components/compoInner";
 import HiddenWrap from "../_components/hiddenWrap";
 import ProjectRealWrap from "../_components/projectRealWrap";
 import ActivityWrap from "../_components/activityWrap";
+import CertificateWrap from "../_components/certificateWrap";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <HiddenWrap>
             <ProjectRealWrap />
             <ActivityWrap />
+            <CertificateWrap />
             <Footer />
           </HiddenWrap>
         </div>

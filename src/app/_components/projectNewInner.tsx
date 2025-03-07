@@ -16,7 +16,7 @@ const ProjectNewInner = ({image, dark_image, project_type, key2}: ProjectNewBann
     >
       {" "}
       <div className="absolute left-[calc(50%-8px)] bottom-1 text-stone-300 dark:text-zinc-700">
-        {project_type === "web" ? <LuFlower /> : project_type === "con" ? <TbMoonStars /> : ""}
+        {project_type === "web" ? <LuFlower /> : project_type === "con" ? <TbMoonStars /> : theme !== "dark" ? <LuFlower /> : <TbMoonStars />}
       </div>
     </li>
     </Link>
