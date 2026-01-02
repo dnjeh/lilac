@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const getStreak = () => {
-  const start = new Date("2022-11-14");
+  const start = new Date("2022-11-17");
   const today = new Date();
   const diffTime = today.getTime() - start.getTime();
   // 밀리초를 일(day) 단위로 변환

@@ -26,7 +26,7 @@ const ActivityInner = ({ context, isRight }: ActivityInnerProps) => {
             ))}
           </ul>
         </div>
-        <div className={cn("hidden md:flex items-center justify-center h-96 p-1 border-[1px] dark:border-black rounded-lg dark:bg-[#0C0C0C] select-none order-2",
+        <div className={cn("hidden md:flex items-center justify-center h-80 p-1 border-[1px] dark:border-black rounded-lg dark:bg-[#0C0C0C] select-none order-2",
           isRight ? "lg:order-1" : "order-3"
         )}>
           <Image

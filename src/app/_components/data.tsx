@@ -1,3 +1,4 @@
+import ImgRinorbit from "../../../public/rinorbit.png";
 import ImgSpeedat from "../../../public/speedat.webp";
 import ImgIsc  from "../../../public/iscfinal.webp";
 import ImgRC  from "../../../public/rgbcube.webp";
@@ -19,13 +20,34 @@ import { IoMdMail } from "react-icons/io";
 import ImgSolved from "./imgSolved";
 import { getStreak } from "@/lib/utils";
 
+export const CompanyList: CompanyType[] = [
+  {
+    name: "주식회사리노빗",
+    image: ImgRinorbit,
+    affiliation: "연구개발팀",
+    timestemp_start: "2025.04.01",
+    timestemp_end: "?",
+    detail: [
+      {
+        title: "기기 통합 제어 툴 개발",
+        detail: [
+          "기기의 카메라와 XYZ스테이지를 제어하기 위해 관리자용 툴을 만들었어요.",
+          "기술이 여러 개고 또 처음이기도 했지만, AI와 공식문서 덕에 완성했어요.",
+          "사용 기술: Qt, GenICam, fcntl.h 등"
+        ]
+      }
+    ],
+    key2: 1,
+  }
+]
+
 export const lilacProjectList: ProjectType[] = [
   {
     detail: [
-      "학교 비공식 커뮤니티 사이트 스피닷에서 캘린더, 급식, 시간표 컴포넌트를 만들었어요.",
-      "애니메이션을 위해 useRef 훅을 이용하여 캘린더의 자연스러운 움직임을 구현했어요.",
-      "교육청 OpenApi를 통해 급식, 시간표 정보를 next.js 내에서 받아왔어요.",
-      "pnpm, typescript, next.js, tailwindcss 등의 기술을 사용했어요.",
+      "학교 비공식 커뮤니티 스피닷에서 캘린더, 급식, 시간표 컴포넌트를 만들었어요.",
+      "useRef 훅을 이용하여 캘린더의 자연스러운 움직임을 구현했어요.",
+      "교육청 OpenApi를 통해 급식, 시간표 정보를 받아왔어요.",
+      "사용 기술: pnpm, typescript, next.js, tailwindcss 등",
     ],
     detail_image: ImgSpeedatGif,
     detail_image_alt: "스피닷 캘린더 시연 영상",
@@ -36,10 +58,10 @@ export const lilacProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "학교 동아리 소개 사이트 Introduce School Club에서 등록 페이지를 만들었어요.",
-      "이미지 추가 기능을 구현하면서 그와 관련된 여러 메소드들을 써보는 좋은 기회였어요.",
-      "이미지가 들어간 form을 보다 수월하게 처리하기 위해 FormData와 일반적인 POST을 동시에 활용했어요.",
-      "yarn, typescript, next.js, tailwindcss, axios 등의 기술을 사용했어요.",
+      "동아리 소개 사이트 Introduce School Club에서 등록 페이지를 만들었어요.",
+      "이미지 추가 기능을 구현하면서 여러 메소드들을 써보는 좋은 기회였어요.",
+      "이미지가 들어간 form을 처리하기 위해 Ajax와 POST을 동시에 활용했어요.",
+      "사용 기술: yarn, typescript, next.js, tailwindcss, axios 등",
     ],
     detail_image: ImgISCGif,
     detail_image_alt: "introduce school club post 시연 영상",
@@ -50,10 +72,9 @@ export const lilacProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩을 맡았어요.",
+      "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩과 회로를 맡았어요.",
       "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 은상을 수상하였어요.",
-      "SPI, Bluetooth 같은 통신 기법부터 numpy, matplotlib, tkinter 등의 라이브러리, 패턴 구현을 위한 알고리즘까지 다양한 기술이 들어갔어요.",
-      "C++, Java, Python 등의 언어가 사용되었어요.",
+      "사용 기술: SPI, Bluetooth, numpy, matplotlib, tkinter, C++, Java 등",
     ],
     detail_image: ImgRCwebp,
     detail_image_alt: "RGB LED cube 스크린샷",
@@ -70,8 +91,7 @@ export const dnjehProjectList: ProjectType[] = [
       "편지를 암호화하고 유효기간을 설정하여 주고 받을 수 있는 프로그램이에요.",
       "믿을 수 없는 메신저들을 대신하여 소통하기 위해 손수 만들어졌어요.",
       "1년동안 꾸준히 쓰이며 피드백을 모아 계절마다 업데이트 되었어요.",
-      "이용자가 없어져 현재는 업데이트가 안 되고 있어요.",
-      "conio.h, io.h, errno.h, windows.h 등의 라이브러리를 사용했어요.",
+      "라이브러리: conio.h, io.h, errno.h, windows.h 등",
     ],
     detail_image: ImgLLGif,
     detail_image_alt: "LimitLetter 스크린샷",
@@ -84,9 +104,9 @@ export const dnjehProjectList: ProjectType[] = [
     detail: [
       "행운의 이름을 뽑기 위해 특별히 제작된 프로그램이에요.",
       "부드러운 움직임을 위해 더블 버퍼링 기법을 이용했어요.",
-      "레버의 움직임과 슬롯머신의 움직임을 개별적으로 제어하기 위해 스레드를 썼어요.",
-      "리소스의 확장성을 위해서 외부에서 아스키 글꼴을 불러오도록 설계했어요.",
-      "conio.h, errno.h, process.h 등의 라이브러리를 사용했어요.",
+      "각 부분의 움직임들을 개별적으로 제어하기 위해 스레드를 썼어요.",
+      "리소스의 확장성을 위해서 외부에서 텍스트 글꼴을 불러오도록 설계했어요.",
+      "라이브러리: conio.h, errno.h, process.h 등",
     ],
     detail_image: ImgBSMGif,
     detail_image_alt: "BigSlotMachine 스크린샷",
@@ -98,9 +118,9 @@ export const dnjehProjectList: ProjectType[] = [
   {
     detail: [
       "전력 부족 문제: 아두이노 우노에서 공급되는 전력으로 큐브를 감당할 수 없어 파워 서플라이로 교체하였고, 이후 어뎁터로 안정화 시켰어요.",
-      "LED 불량 문제: 깊숙한 LED에서 불량이 발생하여 핀셋으로 교체하였어요.",
-      "합선 예방: 혹시 몰라 큐브와 전선 사이를 고무로 감싸주었어요.",
-      "신호 교란 문제: 배선 미스로 인해 SPI 통신이 고질적으로 불안정하게 되었었고, 오실로스코프로 발생 위치를 확인한 뒤 출품 전에 무사히 해결했어요.",
+      "LED 불량 문제: LED에 불량이 발생하여 핀셋으로 교체하였어요.",
+      "합선 예방: 미래를 대비하여 큐브와 전선 사이를 고무로 감싸주었어요.",
+      "신호 교란 문제: 배선 미스로 인해 SPI 통신이 고질적으로 불안정하게 되었었고, 오실로스코프로 발생 위치를 확인한 뒤 무사히 해결했어요.",
     ],
     detail_image: ImgRCwebp,
     detail_image_alt: "RGB LED cube 스크린샷",
@@ -129,8 +149,8 @@ export const ActivityList: ActivityType[] = [
   },
   {
     detail: [
-      "이틀간 속성으로 진행되었던 AICE Associate를 취득하기 위한 교육이였어요.",
-      "시험 당일, 과제를 완수할 수 있었고 그 결과 자격증을 취득할 수 있었어요.",
+      "이틀간 진행되었던 AICE Associate를 취득하기 위한 교육이였어요.",
+      "시험 당일, 과제를 완성해냈고 그 결과 자격증을 취득했어요.",
       "아주 빠른 템포로 진행되는 강의를 듣는 능력을 얻을 수 있었던 고마운 이틀이였어요.",
     ],
     detail_image: ImgKT,
@@ -143,15 +163,15 @@ export const ActivityList: ActivityType[] = [
   },
   {
     detail: [
-      "solved.ac 기준, 오늘도 스트릭을 올리며 코딩을 하고 있어요.",
-      "'매일 무조건 한다'는 건 거짓이겠지만 그 빈도는 극히 드물어요.",
+      "solved.ac 기준, 오늘도 연속 일수를 늘리며 코딩을 하고 있어요.",
+      "매일 할 순 없지만 그 빈도는 극히 드물어요.",
       "현재 사이트 내에서 상위 3%, 앞으로의 여정을 응원해주시길 빌어요."
     ],
     detail_image: ImgSolvedimg,
     detail_image_alt: "솔브닥 대표 이미지",
     name: "하루 한 문제 & 한 커밋",
     key2: 3,
-    timestemp_start: "22.11.12",
+    timestemp_start: "2022.11.12",
     timestemp_end: "?",
     host: "솔브드"
   },
