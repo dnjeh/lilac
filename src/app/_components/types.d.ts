@@ -28,6 +28,7 @@ type CompanyDetailType = {
 type CompanyType = {
   name: string;
   image?: StaticImageData;
+  dark_image?: StaticImageData; 
   affiliation: string;
   timestemp_start: string;
   timestemp_end: string;

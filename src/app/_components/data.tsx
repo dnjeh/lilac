@@ -1,8 +1,12 @@
-import ImgRinorbit from "../../../public/rinorbit.png";
+import ImgRinorbit from "../../../public/rinorbit.webp";
+import ImgDarkRinorbit from "../../../public/rinorbit_white.webp";
 import ImgSpeedat from "../../../public/speedat.webp";
 import ImgIsc  from "../../../public/iscfinal.webp";
+import ImgPs  from "../../../public/project_star.webp";
+import ImgPsg  from "../../../public/project_starg.webp";
 import ImgRC  from "../../../public/rgbcube.webp";
 import ImgKT  from "../../../public/kt.webp";
+import ImgNYPC  from "../../../public/nypc.webp";
 import ImgRCwebp  from "../../../public/rgbcubeg.webp";
 import ImgLLwebp  from "../../../public/ll.webp";
 import ImgSolvedimg  from "../../../public/solved.webp";
@@ -24,6 +28,7 @@ export const CompanyList: CompanyType[] = [
   {
     name: "주식회사리노빗",
     image: ImgRinorbit,
+    dark_image: ImgDarkRinorbit,
     affiliation: "연구개발팀",
     timestemp_start: "2025.04.01",
     timestemp_end: "?",
@@ -32,10 +37,27 @@ export const CompanyList: CompanyType[] = [
         title: "기기 통합 제어 툴 개발",
         detail: [
           "기기의 카메라와 XYZ스테이지를 제어하기 위해 관리자용 툴을 만들었어요.",
+          "다양한 Api와 GUI 프레임워크를 엮는 복잡한 작업이였어요.",
           "기술이 여러 개고 또 처음이기도 했지만, AI와 공식문서 덕에 완성했어요.",
-          "사용 기술: Qt, GenICam, fcntl.h 등"
+          "사용 기술: Qt, GenICam, fcntl.h, cmake 등"
         ]
-      }
+      },
+      {
+        title: "기기 잔존 버그 해결",
+        detail: [
+          "그 동안 알고있었지만 끝내 해결하지 못했던 버그들을 고쳤어요.",
+          "로직 자체부터 문제였기도, 공식문서가 잘못되기도 했지만 무사히 해결했어요.",
+          "고친 후에는 문서를 남겨 다시는 이런 일이 발생하지 않도록 노력했어요.",
+        ]
+      },
+      {
+        title: "그 외",
+        detail: [
+          "기본적으로 C++을 통해 모터, 펌웨어를 제어하는 일을 맡았어요.",
+          "프로세스의 전체적인 흐름을 파악해 순서도로 정리하기도 했었어요.", 
+          "대표님의 손발이 되어 기기의 속도를 끌어올린 날은 지금도 새록새록해요.",
+        ]
+      },
     ],
     key2: 1,
   }
@@ -59,7 +81,7 @@ export const lilacProjectList: ProjectType[] = [
   {
     detail: [
       "동아리 소개 사이트 Introduce School Club에서 등록 페이지를 만들었어요.",
-      "이미지 추가 기능을 구현하면서 여러 메소드들을 써보는 좋은 기회였어요.",
+      "이미지 추가 기능을 구현하면서 여러 메소드들을 써보는 프로젝트였어요.",
       "이미지가 들어간 form을 처리하기 위해 Ajax와 POST을 동시에 활용했어요.",
       "사용 기술: yarn, typescript, next.js, tailwindcss, axios 등",
     ],
@@ -72,7 +94,23 @@ export const lilacProjectList: ProjectType[] = [
   },
   {
     detail: [
+      "게임 도우미 사이트 Project Star에서 FE 엔지니어이자 PM을 맡았어요.",
+      "1월 8일 배포를 목표로 개발 및 개선해나가고 있어요.",
+      "기본적인 디자인을 토대로 AI를 활용하여 빠른 퍼블리싱을 도모했어요.",
+      "복잡한 기능을 AI와 같이 학습하며 성장할 수 있는 좋은 기회였어요.",
+      "사용 기술: typescript, next.js, tailwindcss, motion, zustand, pako 등",
+    ],
+    detail_image: ImgPsg,
+    detail_image_alt: "Project star 미완 시연 영상",
+    name: "Project Star",
+    image: ImgPs,
+    image_alt: "Project star 로고",
+    key2: 3,
+  },
+  {
+    detail: [
       "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩과 회로를 맡았어요.",
+      "하드웨어를 제대로 다뤄본 첫 작품이였지만, 그 덕에 큰 발걸음을 내딛었어요.",
       "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 은상을 수상하였어요.",
       "사용 기술: SPI, Bluetooth, numpy, matplotlib, tkinter, C++, Java 등",
     ],
@@ -82,7 +120,7 @@ export const lilacProjectList: ProjectType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     image_alt: "RGB LED cube 로고",
-    key2: 5,
+    key2: 999,
   },
 ];
 export const dnjehProjectList: ProjectType[] = [
@@ -128,7 +166,7 @@ export const dnjehProjectList: ProjectType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     image_alt: "RGB LED cube 로고",
-    key2: 5,
+    key2: 999,
   },
 ];
 
@@ -163,6 +201,20 @@ export const ActivityList: ActivityType[] = [
   },
   {
     detail: [
+      "넥슨이 주최하는 청소년을 위한 프로그래밍 대회에 3년 내내 출전했어요.",
+      "매번 본선까진 출전 못하더라도 특별상을 받을 수 있었어요.",
+      "이러한 제 실력 확인은 앞으로의 열정이자 계기가 되었어요."
+    ],
+    detail_image: ImgNYPC,
+    detail_image_alt: "NYPC 대표 이미지",
+    name: "NYPC 예선 출전",
+    key2: 3,
+    timestemp_start: "2022",
+    timestemp_end: "2024",
+    host: "넥슨"
+  },
+  {
+    detail: [
       "solved.ac 기준, 오늘도 연속 일수를 늘리며 코딩을 하고 있어요.",
       "매일 할 순 없지만 그 빈도는 극히 드물어요.",
       "현재 사이트 내에서 상위 3%, 앞으로의 여정을 응원해주시길 빌어요."
@@ -170,7 +222,7 @@ export const ActivityList: ActivityType[] = [
     detail_image: ImgSolvedimg,
     detail_image_alt: "솔브닥 대표 이미지",
     name: "하루 한 문제 & 한 커밋",
-    key2: 3,
+    key2: 4,
     timestemp_start: "2022.11.12",
     timestemp_end: "?",
     host: "솔브드"
@@ -233,7 +285,11 @@ export const lilacProjectBanner: ProjectNewBannerType[] = [
     project_type: "web",
     key2: 2,
   },
-  
+  {
+    image: ImgPs,
+    project_type: "web",
+    key2: 3,
+  }
 ]
 export const dnjehProjectBanner: ProjectNewBannerType[] = [
   {
@@ -255,6 +311,6 @@ export const ehdnjProjectBanner: ProjectNewBannerType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     project_type: "etc",
-    key2: 5,
+    key2: 999,
   },
 ]
