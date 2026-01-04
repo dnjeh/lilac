@@ -7,8 +7,10 @@ import Footer from "../_components/footer";
 import Section from "../_components/section";
 import CompoInner from "../_components/compoInner";
 import HiddenWrap from "../_components/hiddenWrap";
+import CompanyWrap from "../_components/companyWrap";
 import ProjectRealWrap from "../_components/projectRealWrap";
 import ActivityWrap from "../_components/activityWrap";
+import CertificateWrap from "../_components/certificateWrap";
 
 export default function Home() {
   return (
@@ -24,8 +26,10 @@ export default function Home() {
             </div>
           </Section>
           <HiddenWrap>
+            <CompanyWrap />
             <ProjectRealWrap />
             <ActivityWrap />
+            <CertificateWrap />
             <Footer />
           </HiddenWrap>
         </div>

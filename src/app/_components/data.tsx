@@ -1,7 +1,12 @@
+import ImgRinorbit from "../../../public/rinorbit.webp";
+import ImgDarkRinorbit from "../../../public/rinorbit_white.webp";
 import ImgSpeedat from "../../../public/speedat.webp";
 import ImgIsc  from "../../../public/iscfinal.webp";
+import ImgPs  from "../../../public/project_star.webp";
+import ImgPsg  from "../../../public/project_starg.webp";
 import ImgRC  from "../../../public/rgbcube.webp";
 import ImgKT  from "../../../public/kt.webp";
+import ImgNYPC  from "../../../public/nypc.webp";
 import ImgRCwebp  from "../../../public/rgbcubeg.webp";
 import ImgLLwebp  from "../../../public/ll.webp";
 import ImgSolvedimg  from "../../../public/solved.webp";
@@ -19,13 +24,52 @@ import { IoMdMail } from "react-icons/io";
 import ImgSolved from "./imgSolved";
 import { getStreak } from "@/lib/utils";
 
+export const CompanyList: CompanyType[] = [
+  {
+    name: "주식회사리노빗",
+    image: ImgRinorbit,
+    dark_image: ImgDarkRinorbit,
+    affiliation: "연구개발팀",
+    timestemp_start: "2025.04.01",
+    timestemp_end: "?",
+    detail: [
+      {
+        title: "기기 통합 제어 툴 개발",
+        detail: [
+          "기기의 카메라와 XYZ스테이지를 제어하기 위해 <span class=\"font-semibold\">관리자용 툴</span>을 만들었어요.",
+          "다양한 Api와 GUI 프레임워크를 엮는 복잡한 작업이였어요.",
+          "기술이 여러 개고 또 처음이기도 했지만, <span class=\"font-semibold\">AI와 공식문서</span> 덕에 완성했어요.",
+          "<span class=\"font-semibold\">사용 기술</span>: Qt, GenICam, fcntl.h, cmake 등"
+        ]
+      },
+      {
+        title: "기기 잔존 버그 해결",
+        detail: [
+          "그 동안 알고있었지만 끝내 <span class=\"font-semibold\">해결하지 못했던 버그들</span>을 고쳤어요.",
+          "로직 자체부터 문제였기도, 공식문서가 잘못되기도 했지만 무사히 <span class=\"font-semibold\">해결</span>했어요.",
+          "고친 후에는 <span class=\"font-semibold\">문서를 남겨</span> 다시는 이런 일이 발생하지 않도록 노력했어요.",
+        ]
+      },
+      {
+        title: "그 외",
+        detail: [
+          "기본적으로 C++을 통해 모터, 펌웨어를 제어하는 일을 맡았어요.",
+          "프로세스의 전체적인 흐름을 파악해 순서도로 정리하기도 했었어요.", 
+          "대표님의 손발이 되어 기기의 속도를 끌어올린 날은 지금도 새록새록해요.",
+        ]
+      },
+    ],
+    key2: 1,
+  }
+]
+
 export const lilacProjectList: ProjectType[] = [
   {
     detail: [
-      "학교 비공식 커뮤니티 사이트 스피닷에서 캘린더, 급식, 시간표 컴포넌트를 만들었어요.",
-      "애니메이션을 위해 useRef 훅을 이용하여 캘린더의 자연스러운 움직임을 구현했어요.",
-      "교육청 OpenApi를 통해 급식, 시간표 정보를 next.js 내에서 받아왔어요.",
-      "pnpm, typescript, next.js, tailwindcss 등의 기술을 사용했어요.",
+      "학교 비공식 커뮤니티 스피닷에서 <span class=\"font-semibold\">캘린더, 급식, 시간표</span> 컴포넌트를 만들었어요.",
+      "useRef 훅을 이용하여 캘린더의 <span class=\"font-semibold\">자연스러운 움직임</span>을 구현했어요.",
+      "교육청 <span class=\"font-semibold\">OpenApi</span>를 통해 급식, 시간표 정보를 받아왔어요.",
+      "<span class=\"font-semibold\">사용 기술</span>: pnpm, typescript, next.js, tailwindcss 등",
     ],
     detail_image: ImgSpeedatGif,
     detail_image_alt: "스피닷 캘린더 시연 영상",
@@ -36,10 +80,10 @@ export const lilacProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "학교 동아리 소개 사이트 Introduce School Club에서 등록 페이지를 만들었어요.",
-      "이미지 추가 기능을 구현하면서 그와 관련된 여러 메소드들을 써보는 좋은 기회였어요.",
-      "이미지가 들어간 form을 보다 수월하게 처리하기 위해 FormData와 일반적인 POST을 동시에 활용했어요.",
-      "yarn, typescript, next.js, tailwindcss, axios 등의 기술을 사용했어요.",
+      "동아리 소개 사이트 Introduce School Club에서 <span class=\"font-semibold\">등록 페이지</span>를 만들었어요.",
+      "<span class=\"font-semibold\">이미지 추가 기능</span>을 구현하면서 여러 메소드들을 써보는 프로젝트였어요.",
+      "이미지가 들어간 form을 처리하기 위해 <span class=\"font-semibold\">Ajax와 POST</span>을 동시에 활용했어요.",
+      "<span class=\"font-semibold\">사용 기술</span>: yarn, typescript, next.js, tailwindcss, axios 등",
     ],
     detail_image: ImgISCGif,
     detail_image_alt: "introduce school club post 시연 영상",
@@ -50,10 +94,25 @@ export const lilacProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "4인이 협동하여 만들었던 졸업작품이고, 조장으로서 코딩을 맡았어요.",
-      "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 은상을 수상하였어요.",
-      "SPI, Bluetooth 같은 통신 기법부터 numpy, matplotlib, tkinter 등의 라이브러리, 패턴 구현을 위한 알고리즘까지 다양한 기술이 들어갔어요.",
-      "C++, Java, Python 등의 언어가 사용되었어요.",
+      "게임 도우미 사이트 Project Star에서 FE 엔지니어이자 <span class=\"font-semibold\">PM</span>을 맡았어요.",
+      "1월 8일 배포를 목표로 <span class=\"font-semibold\">개발 및 개선</span>해나가고 있어요.",
+      "기본적인 디자인을 토대로 AI를 활용하여 <span class=\"font-semibold\">빠른 퍼블리싱</span>을 도모했어요.",
+      "복잡한 기능을 AI와 같이 <span class=\"font-semibold\">학습하며 성장</span>할 수 있는 좋은 기회였어요.",
+      "<span class=\"font-semibold\">사용 기술</span>: typescript, next.js, tailwindcss, motion, zustand, pako 등",
+    ],
+    detail_image: ImgPsg,
+    detail_image_alt: "Project star 미완 시연 영상",
+    name: "Project Star",
+    image: ImgPs,
+    image_alt: "Project star 로고",
+    key2: 3,
+  },
+  {
+    detail: [
+      "4인이 협동하여 만들었던 졸업작품이고, <span class=\"font-semibold\">조장</span>으로서 코딩과 회로를 맡았어요.",
+      "하드웨어를 제대로 다뤄본 첫 작품이였지만, 그 덕에 <span class=\"font-semibold\">큰 발걸음</span>을 내딛었어요.",
+      "프로젝트를 진행하면서 수많은 문제가 발생했지만, 결국 무사히 출품하여 졸업작품 발표회에서 <span class=\"font-semibold\">은상을 수상</span>하였어요.",
+      "<span class=\"font-semibold\">사용 기술</span>: SPI, Bluetooth, numpy, matplotlib, tkinter, C++, Java 등",
     ],
     detail_image: ImgRCwebp,
     detail_image_alt: "RGB LED cube 스크린샷",
@@ -61,17 +120,16 @@ export const lilacProjectList: ProjectType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     image_alt: "RGB LED cube 로고",
-    key2: 5,
+    key2: 999,
   },
 ];
 export const dnjehProjectList: ProjectType[] = [
   {
     detail: [
-      "편지를 암호화하고 유효기간을 설정하여 주고 받을 수 있는 프로그램이에요.",
-      "믿을 수 없는 메신저들을 대신하여 소통하기 위해 손수 만들어졌어요.",
+      "편지를 <span class=\"font-semibold\">암호화</span>하고 유효기간을 설정하여 주고 받을 수 있는 프로그램이에요.",
+      "<span class=\"font-semibold\">믿을 수 없는 메신저들</span>을 대신하여 소통하기 위해 손수 만들어졌어요.",
       "1년동안 꾸준히 쓰이며 피드백을 모아 계절마다 업데이트 되었어요.",
-      "이용자가 없어져 현재는 업데이트가 안 되고 있어요.",
-      "conio.h, io.h, errno.h, windows.h 등의 라이브러리를 사용했어요.",
+      "<span class=\"font-semibold\">라이브러리</span>: conio.h, io.h, errno.h, windows.h 등",
     ],
     detail_image: ImgLLGif,
     detail_image_alt: "LimitLetter 스크린샷",
@@ -82,11 +140,11 @@ export const dnjehProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "행운의 이름을 뽑기 위해 특별히 제작된 프로그램이에요.",
-      "부드러운 움직임을 위해 더블 버퍼링 기법을 이용했어요.",
-      "레버의 움직임과 슬롯머신의 움직임을 개별적으로 제어하기 위해 스레드를 썼어요.",
-      "리소스의 확장성을 위해서 외부에서 아스키 글꼴을 불러오도록 설계했어요.",
-      "conio.h, errno.h, process.h 등의 라이브러리를 사용했어요.",
+      "<span class=\"font-semibold\">행운의 이름</span>을 뽑기 위해 특별히 제작된 프로그램이에요.",
+      "부드러운 움직임을 위해 <span class=\"font-semibold\">더블 버퍼링</span> 기법을 이용했어요.",
+      "각 부분의 움직임들을 개별적으로 제어하기 위해 <span class=\"font-semibold\">스레드</span>를 썼어요.",
+      "리소스의 확장성을 위해서 <span class=\"font-semibold\">외부</span>에서 텍스트 글꼴을 불러오도록 설계했어요.",
+      "<span class=\"font-semibold\">라이브러리</span>: conio.h, errno.h, process.h 등",
     ],
     detail_image: ImgBSMGif,
     detail_image_alt: "BigSlotMachine 스크린샷",
@@ -97,10 +155,10 @@ export const dnjehProjectList: ProjectType[] = [
   },
   {
     detail: [
-      "전력 부족 문제: 아두이노 우노에서 공급되는 전력으로 큐브를 감당할 수 없어 파워 서플라이로 교체하였고, 이후 어뎁터로 안정화 시켰어요.",
-      "LED 불량 문제: 깊숙한 LED에서 불량이 발생하여 핀셋으로 교체하였어요.",
-      "합선 예방: 혹시 몰라 큐브와 전선 사이를 고무로 감싸주었어요.",
-      "신호 교란 문제: 배선 미스로 인해 SPI 통신이 고질적으로 불안정하게 되었었고, 오실로스코프로 발생 위치를 확인한 뒤 출품 전에 무사히 해결했어요.",
+      "<span class=\"font-semibold\">전력 부족 문제</span>: 아두이노 우노에서 공급되는 전력으로 큐브를 감당할 수 없어 파워 서플라이로 교체하였고, 이후 어뎁터로 안정화 시켰어요.",
+      "<span class=\"font-semibold\">LED 불량 문제</span>: LED에 불량이 발생하여 핀셋으로 교체하였어요.",
+      "<span class=\"font-semibold\">합선 예방</span>: 미래를 대비하여 큐브와 전선 사이를 고무로 감싸주었어요.",
+      "<span class=\"font-semibold\">신호 교란 문제</span>: 배선 미스로 인해 SPI 통신이 고질적으로 불안정하게 되었었고, 오실로스코프로 발생 위치를 확인한 뒤 무사히 해결했어요.",
     ],
     detail_image: ImgRCwebp,
     detail_image_alt: "RGB LED cube 스크린샷",
@@ -108,16 +166,16 @@ export const dnjehProjectList: ProjectType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     image_alt: "RGB LED cube 로고",
-    key2: 5,
+    key2: 999,
   },
 ];
 
 export const ActivityList: ActivityType[] = [
   {
     detail: [
-      "10주간 진행되는 현장실습에서 SoC 엔지니어의 PI, PD 과정을 수료했어요.",
-      "또한 처음으로 교육받는 리눅스의 시험에서 귀사기준 유일한 만점을 받았어요.",
-      "10주동안 반복되는 교육과 시험으로, 회사생활을 어느정도 익힐 수 있었던 귀중한 경험이였어요.",
+      "10주간 진행되는 현장실습에서 SoC 엔지니어의 <span class=\"font-semibold\">PI, PD 과정</span>을 수료했어요.",
+      "또한 처음으로 교육받는 리눅스의 시험에서 귀사기준 유일한 <span class=\"font-semibold\">만점</span>을 받았어요.",
+      "10주동안 반복되는 교육과 시험으로, <span class=\"font-semibold\">회사생활</span>을 어느정도 익힐 수 있었던 귀중한 경험이였어요.",
     ],
     detail_image: ImgAD,
     detail_image_alt: "ADTechnology 산학현장실습 스크린샷",
@@ -129,9 +187,9 @@ export const ActivityList: ActivityType[] = [
   },
   {
     detail: [
-      "이틀간 속성으로 진행되었던 AICE Associate를 취득하기 위한 교육이였어요.",
-      "시험 당일, 과제를 완수할 수 있었고 그 결과 자격증을 취득할 수 있었어요.",
-      "아주 빠른 템포로 진행되는 강의를 듣는 능력을 얻을 수 있었던 고마운 이틀이였어요.",
+      "이틀간 진행되었던 <span class=\"font-semibold\">AICE Associate</span>를 취득하기 위한 교육이였어요.",
+      "시험 당일, 과제를 완성해냈고 그 결과 <span class=\"font-semibold\">자격증을 취득</span>했어요.",
+      "<span class=\"font-semibold\">아주 빠른 템포</span>로 진행되는 강의를 듣는 능력을 얻을 수 있었던 고마운 이틀이였어요.",
     ],
     detail_image: ImgKT,
     detail_image_alt: "KT 인공지능 모델링 사진",
@@ -143,19 +201,88 @@ export const ActivityList: ActivityType[] = [
   },
   {
     detail: [
-      "solved.ac 기준, 오늘도 스트릭을 올리며 코딩을 하고 있어요.",
-      "'매일 무조건 한다'는 건 거짓이겠지만 그 빈도는 극히 드물어요.",
-      "현재 사이트 내에서 상위 3%, 앞으로의 여정을 응원해주시길 빌어요."
+      "넥슨이 주최하는 청소년을 위한 프로그래밍 대회에 <span class=\"font-semibold\">3년 내내 출전</span>했어요.",
+      "매번 본선까진 출전 못하더라도 <span class=\"font-semibold\">특별상</span>을 받을 수 있었어요.",
+      "이러한 제 실력 확인은 앞으로의 <span class=\"font-semibold\">열정</span>이자 <span class=\"font-semibold\">계기</span>가 되었어요."
+    ],
+    detail_image: ImgNYPC,
+    detail_image_alt: "NYPC 대표 이미지",
+    name: "NYPC 예선 출전",
+    key2: 3,
+    timestemp_start: "2022",
+    timestemp_end: "2024",
+    host: "넥슨"
+  },
+  {
+    detail: [
+      "solved.ac 기준, 오늘도 <span class=\"font-semibold\">연속 일수</span>를 늘리며 코딩을 하고 있어요.",
+      "매일 할 순 없지만 그 빈도는 <span class=\"font-semibold\">극히 드물어요.</span>",
+      "현재 사이트 내에서 <span class=\"font-semibold\">상위 3%</span>, 앞으로의 여정을 응원해주시길 빌어요."
     ],
     detail_image: ImgSolvedimg,
     detail_image_alt: "솔브닥 대표 이미지",
     name: "하루 한 문제 & 한 커밋",
-    key2: 3,
-    timestemp_start: "22.11.12",
+    key2: 4,
+    timestemp_start: "2022.11.12",
     timestemp_end: "?",
     host: "솔브드"
   },
 ];
+
+export const CertificateList: CertificateType[] = [
+  {
+    affiliation: "국가공인자격증",
+    key2: 1,
+    detail: [
+      {
+        title: "정보처리기능사",
+        timestemp: "2022.09.16",
+        detail: [
+          "컴퓨터에 관한 기초적인 지식과 기술을 갖췄는지를 봄",
+          "프로그래밍 언어와 SQL 문법을 익혀 <span class=\"font-semibold\">여유롭게 획득</span>했어요.",
+        ]
+      },
+      {
+        title: "웹디자인기능사",
+        timestemp: "2023.12.13",
+        detail: [
+          "주어진 자원과 S/W로 홈페이지를 기획, 설계제작할 수 있는지 봄",
+          "기존의 <span class=\"font-semibold\">동아리 활동</span>으로 갖춰진 실력으로 정정당당하게 합격했어요.",
+        ]
+      },
+      {
+        title: "정보기기운용기능사",
+        timestemp: "2024.06.26",
+        detail: [
+          "컴퓨터 및 네트워크 장비 등을 이해하고 조작, 유지보수가 가능한지 봄",
+          "<span class=\"font-semibold\">처음</span>이였지만 관련 지식과 조작 방법을 터득하여 무사히 넘어갈 수 있었어요.",
+        ]
+      },
+      {
+        title: "전자기능사",
+        timestemp: "2024.07.03",
+        detail: [
+          "전자기기에 대한 지식과 기술을 가지고 제작·조작·보수가 가능한지 봄",
+          "학교에서 여러 개의 기판을 만들며 <span class=\"font-semibold\">숙달</span>한 끝에 얻을 수 있었어요.",
+        ]
+      },
+    ]
+  },
+  /*{
+    affiliation: "민간자격증",
+    key2: 2,
+    detail: [
+      {
+        title: "AICE Associate",
+        timestemp: "2023.08.09",
+        detail: [
+          "",
+          "이틀 내내 ",
+        ]
+      },
+    ]
+  }*/
+]
 
 export const itemList: ItemType[] = [
   {
@@ -213,7 +340,11 @@ export const lilacProjectBanner: ProjectNewBannerType[] = [
     project_type: "web",
     key2: 2,
   },
-  
+  {
+    image: ImgPs,
+    project_type: "web",
+    key2: 3,
+  }
 ]
 export const dnjehProjectBanner: ProjectNewBannerType[] = [
   {
@@ -235,6 +366,6 @@ export const ehdnjProjectBanner: ProjectNewBannerType[] = [
     image: ImgRC,
     dark_image: ImgRCdark,
     project_type: "etc",
-    key2: 5,
+    key2: 999,
   },
 ]
