@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 const ProjectInner = ({
   detail,
   detail_image,
@@ -11,7 +10,7 @@ const ProjectInner = ({
   key2,
 }: ProjectType) => {
   return (
-    <li id={"prj"+key2}>
+    <li id={"prj" + key2}>
       <div className="flex gap-10">
         <div className="flex-1">
           <h5 className="flex text-2xl sm:text-3xl lg:text-4xl items-center font-semibold gap-3">
@@ -22,7 +21,11 @@ const ProjectInner = ({
             {image && image_alt ? (
               <div className="flex items-center">
                 <div>( </div>
-                <Image src={image} alt={image_alt} className="h-8 object-contain max-w-20" />
+                <Image
+                  src={image}
+                  alt={image_alt}
+                  className="h-8 object-contain max-w-20"
+                />
                 <div> )</div>
               </div>
             ) : (
@@ -31,7 +34,7 @@ const ProjectInner = ({
           </h5>
           <ul className="sm:text-2xl text-xl flex flex-col gap-1 lg:gap-2 mt-3 list-disc marker:text-purple-500 dark:marker:text-yellow-300 pl-6">
             {detail.map((ai, i) => (
-              <li key={i}>{ai}</li>
+              <li key={i} dangerouslySetInnerHTML={{ __html: ai }} />
             ))}
           </ul>
         </div>

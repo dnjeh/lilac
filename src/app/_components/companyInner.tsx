@@ -39,7 +39,7 @@ const CompanyInner = ({ context }: CompanyInnerProps) => {
                   key={i}
                   className="sm:text-2xl text-xl flex flex-col gap-1 lg:gap-2 mt-2 lg:mt-3 list-disc marker:text-purple-500 dark:marker:text-yellow-300 pl-6"
                 >
-                  <li key={i}>{ai}</li>
+                  <li key={i} dangerouslySetInnerHTML={{ __html: ai }} />
                 </ul>
               ))}
             </li>

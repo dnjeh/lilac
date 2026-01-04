@@ -24,16 +24,16 @@ const CertificateInner = ({ context }: CertificateInnerProps) => {
                   </span>
                 </div>
               </h5>
-          <h3 className="text-slate-700 dark:text-zinc-400">
-            {ai.timestemp}
-          </h3>
+              <h3 className="text-slate-700 dark:text-zinc-400">
+                {ai.timestemp}
+              </h3>
 
               {ai.detail.map((ai, i) => (
                 <ul
                   key={i}
                   className="sm:text-2xl text-xl flex flex-col gap-0.5 md:gap-1 lg:gap-2 mt-2 lg:mt-3 list-disc marker:text-purple-500 dark:marker:text-yellow-300 pl-6"
                 >
-                  <li key={i}>{ai}</li>
+                  <li key={i} dangerouslySetInnerHTML={{ __html: ai }}></li>
                 </ul>
               ))}
             </li>
