@@ -40,6 +40,7 @@ const ProjectInner = ({
             src={detail_image}
             alt={detail_image_alt}
             className="object-contain rounded-lg w-full h-full"
+            loading="lazy"
           ></Image>
         </div>
       </div>

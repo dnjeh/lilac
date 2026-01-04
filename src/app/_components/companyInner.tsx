@@ -8,8 +8,8 @@ interface CompanyInnerProps {
 const CompanyInner = ({ context }: CompanyInnerProps) => {
   return (
     <li id={"com" + context.key2}>
-      <div className="flex gap-10 flex-row lg:flex-row">
-        <div className="hidden md:flex flex-col items-end justify-start w-72 pl-24">
+      <div className="flex gap-5 lg:gap-10 flex-col lg:flex-row">
+        <div className="flex flex-col lg:items-end justify-start w-36 lg:w-72 lg:pl-24">
           <CompanyInnerImage
             image={context.image}
             dark_image={context.dark_image}
@@ -37,7 +37,7 @@ const CompanyInner = ({ context }: CompanyInnerProps) => {
               {ai.detail.map((ai, i) => (
                 <ul
                   key={i}
-                  className="sm:text-2xl text-xl flex flex-col gap-1 lg:gap-2 mt-3 list-disc marker:text-purple-500 dark:marker:text-yellow-300 pl-6"
+                  className="sm:text-2xl text-xl flex flex-col gap-1 lg:gap-2 mt-2 lg:mt-3 list-disc marker:text-purple-500 dark:marker:text-yellow-300 pl-6"
                 >
                   <li key={i}>{ai}</li>
                 </ul>

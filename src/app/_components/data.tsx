@@ -229,6 +229,61 @@ export const ActivityList: ActivityType[] = [
   },
 ];
 
+export const CertificateList: CertificateType[] = [
+  {
+    affiliation: "국가공인자격증",
+    key2: 1,
+    detail: [
+      {
+        title: "정보처리기능사",
+        timestemp: "2022.09.16",
+        detail: [
+          "컴퓨터에 관한 기초적인 지식과 기술을 갖췄는지를 봄",
+          "프로그래밍 언어와 SQL 문법을 익혀 여유롭게 획득했어요.",
+        ]
+      },
+      {
+        title: "웹디자인기능사",
+        timestemp: "2023.12.13",
+        detail: [
+          "주어진 자원과 S/W로 홈페이지를 기획, 설계제작할 수 있는지 봄",
+          "기존의 동아리 활동으로 갖춰진 실력으로 정정당당하게 합격했어요.",
+        ]
+      },
+      {
+        title: "정보기기운용기능사",
+        timestemp: "2024.06.26",
+        detail: [
+          "컴퓨터 및 네트워크 장비 등을 이해하고 조작, 유지보수가 가능한지 봄",
+          "처음이였지만 관련 지식과 조작 방법을 터득하여 무사히 넘어갈 수 있었어요.",
+        ]
+      },
+      {
+        title: "전자기능사",
+        timestemp: "2024.07.03",
+        detail: [
+          "전자기기에 대한 지식과 기술을 가지고 제작·조작·보수가 가능한지 봄",
+          "학교에서 여러 개의 기판을 만들며 숙달한 끝에 얻을 수 있었어요.",
+        ]
+      },
+    ]
+  },
+  /*{
+    affiliation: "민간자격증",
+    key2: 2,
+    detail: [
+      {
+        title: "AICE Associate",
+        timestemp: "2023.08.09",
+        detail: [
+          "",
+          "이틀 내내 ",
+        ]
+      },
+    ]
+  }*/
+]
+
 export const itemList: ItemType[] = [
   {
     context: "dnjeh",

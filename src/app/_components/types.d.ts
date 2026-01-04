@@ -45,6 +45,18 @@ type ProjectNewBannerType = {
   key2: number;
 }
 
+type CertificateDetailType = {
+  title: string;
+  timestemp: string;
+  detail: string[];
+}
+
+type CertificateType = {
+  affiliation: string;
+  detail: CertificateDetailType[];
+  key2: number;
+}
+
 type ItemType = {
   context: string;
   icon: React.ReactNode;
