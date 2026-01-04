@@ -8,7 +8,7 @@ const ProjectNewInner = ({image, dark_image, project_type, key2}: ProjectNewBann
   const {theme} = useTheme();
   return (
     <Link href={`#prj${key2}`} className="w-full h-full">
-    <li className="border-[3px] w-full h-[42dvw] xs:h-[24dvw] sm:h-36 rounded-xl xs:rounded-2xl shadow-inner shadow-stone-200 dark:shadow-zinc-800 relative border-stone-200 dark:border-zinc-800 bg-no-repeat bg-center bg-[length:calc(60%)] hover:bg-[length:calc(70%)] cursor-pointer"
+    <li className="border-[3px] w-full h-[24dvw] sm:h-36 rounded-xl xs:rounded-2xl shadow-inner shadow-stone-200 dark:shadow-zinc-800 relative border-stone-200 dark:border-zinc-800 bg-no-repeat bg-center bg-[length:calc(60%)] hover:bg-[length:calc(70%)] cursor-pointer"
       style={{
         backgroundImage: `url(${(theme!=="dark"||!!!dark_image?image.src:dark_image.src)})`,
         transition: "background-size .3s ease"

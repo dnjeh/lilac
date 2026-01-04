@@ -20,12 +20,40 @@ type ActivityType = {
   host: string
 }
 
+type CompanyDetailType = {
+  title: string;
+  detail: string[];
+}
+
+type CompanyType = {
+  name: string;
+  image?: StaticImageData;
+  dark_image?: StaticImageData; 
+  affiliation: string;
+  timestemp_start: string;
+  timestemp_end: string;
+  detail: CompanyDetailType[];
+  key2: number;
+}
+
 type ProjectStringType = "web" | "con" | "etc";
 
 type ProjectNewBannerType = {
   image: StaticImageData;
   dark_image?: StaticImageData;
   project_type: ProjectStringType;
+  key2: number;
+}
+
+type CertificateDetailType = {
+  title: string;
+  timestemp: string;
+  detail: string[];
+}
+
+type CertificateType = {
+  affiliation: string;
+  detail: CertificateDetailType[];
   key2: number;
 }
 
